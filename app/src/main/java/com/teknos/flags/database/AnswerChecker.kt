@@ -52,7 +52,7 @@ class AnswerChecker {
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     constructor(
         context: Context,
         c1: ImageButton?,
@@ -72,7 +72,7 @@ class AnswerChecker {
             val rightButton = clickedI(choice)!!
             rightButton.background = context.getDrawable(R.drawable.button_right)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
-            right.setText((right.text as String).toInt() + 1).toString()
+            right.text = ((right.text as String).toInt() + 1).toString()
         } else {
             val rightButton = clickedI(makeQuestion.rightAnsPlace)
             val wrongButton = clickedI(choice)
@@ -81,7 +81,7 @@ class AnswerChecker {
             assert(wrongButton != null)
             wrongButton!!.background = context.getDrawable(R.drawable.button_wrong)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
-            wrong.setText((wrong.text as String).toInt() + 1).toString()
+            wrong.text = ((wrong.text as String).toInt() + 1).toString()
         }
     }
 
