@@ -26,7 +26,8 @@
             android:textColor="@color/fontColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
 
         <Button
             android:id="@+id/country"
@@ -47,7 +48,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guess" />
+            app:layout_constraintTop_toBottomOf="@+id/guess"
+            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
         <Button
             android:id="@+id/capital"
@@ -68,7 +70,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/country" />
+            app:layout_constraintTop_toBottomOf="@+id/country"
+            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
         <Button
             android:id="@+id/flag1"
@@ -89,7 +92,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/capital" />
+            app:layout_constraintTop_toBottomOf="@+id/capital"
+            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
         <Button
             android:id="@+id/flag2"
@@ -110,6 +114,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flag1" />
+            app:layout_constraintTop_toBottomOf="@+id/flag1"
+            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

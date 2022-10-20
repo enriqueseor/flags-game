@@ -65,7 +65,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/rightCount"
@@ -82,7 +83,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/wrongCount"
@@ -99,7 +101,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:targetApi="o" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
@@ -140,7 +143,8 @@
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/c2"
@@ -161,7 +165,8 @@
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/c3"
@@ -182,7 +187,8 @@
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/c4"
@@ -202,7 +208,8 @@
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
         </LinearLayout>
 
     </LinearLayout>
@@ -227,7 +234,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/crown" />
+            app:srcCompat="@drawable/crown"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/master"
@@ -244,7 +252,8 @@
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/crown" />
+            app:layout_constraintTop_toBottomOf="@+id/crown"
+            tools:ignore="UnusedAttribute" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
