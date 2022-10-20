@@ -38,7 +38,7 @@ class OppositeGame : AppCompatActivity() {
         setContentView(R.layout.activity_opposite_game)
         mode = Singleton.type
         assignVars()
-        WidthHeight(this, 140, 140, 200, 200, choice1, choice2, choice3, choice4)
+        WidthHeight(this)
         makeQuestion = MakeQuestion(mode!!, "Opposite")
         SetQuestion(this, country!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
     }

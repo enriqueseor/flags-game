@@ -1,18 +1,17 @@
 package com.teknos.flags.menu
 
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.EditText
 import android.util.DisplayMetrics
 import android.app.Activity
 import android.content.Context
+import kotlin.math.roundToInt
 
 class WidthHeight {
+
     private val context: Context
 
-    constructor(
-        context: Context,
+    constructor(context: Context,
         width: Int,
         height: Int,
         maxWidth: Int,
@@ -36,15 +35,7 @@ class WidthHeight {
     }
 
     constructor(
-        context: Context,
-        width: Int,
-        height: Int,
-        maxWidth: Int,
-        maxHeight: Int,
-        c1: ImageButton?,
-        c2: ImageButton?,
-        c3: ImageButton?,
-        c4: ImageButton?
+        context: Context
     ) {
         this.context = context
     }
@@ -60,24 +51,6 @@ class WidthHeight {
         this.context = context
         textView.width = getW(width, maxWidth)
         textView.height = getH(height, maxHeight)
-    }
-
-    constructor(
-        context: Context,
-        width: Int,
-        height: Int,
-        maxWidth: Int,
-        maxHeight: Int,
-        email: EditText,
-        pass: EditText
-    ) {
-        this.context = context
-        val w = getW(width, maxWidth)
-        val h = getH(height, maxHeight)
-        email.width = w
-        email.height = h
-        pass.width = w
-        pass.height = h
     }
 
     private fun getW(width: Int, maxWidth: Int): Int {
@@ -100,11 +73,11 @@ class WidthHeight {
 
     private fun pxToDp(px: Int): Int {
         val displayMetrics = context.resources.displayMetrics
-        return Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT))
+        return (px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT)).roundToInt()
     }
 
     private fun dpToPx(dp: Int): Int {
         val displayMetrics = context.resources.displayMetrics
-        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT))
+        return (dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT)).roundToInt()
     }
 }
