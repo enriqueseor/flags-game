@@ -132,7 +132,6 @@
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:longClickable="false"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@android:color/secondary_text_light" />
@@ -148,7 +147,6 @@
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:longClickable="false"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@android:color/secondary_text_light" />
@@ -164,7 +162,6 @@
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:longClickable="false"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@android:color/secondary_text_light"/>
@@ -179,7 +176,6 @@
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:longClickable="false"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@android:color/secondary_text_light" />

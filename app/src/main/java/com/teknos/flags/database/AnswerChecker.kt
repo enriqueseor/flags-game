@@ -1,10 +1,10 @@
 package com.teknos.flags.database
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import com.teknos.flags.R
 import com.teknos.flags.Game
 import com.teknos.flags.OppositeGame
@@ -19,7 +19,6 @@ class AnswerChecker {
     private var ci3: ImageButton? = null
     private var ci4: ImageButton? = null
 
-    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     constructor(
         context: Context,
         c1: Button?,
@@ -37,22 +36,21 @@ class AnswerChecker {
         this.c4 = c4
         if (choice == makeQuestion.rightAnsPlace) {
             val rightButton = clicked(choice)!!
-            rightButton.background = context.getDrawable(R.drawable.button_right)
+            rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             Game.data?.size?.rem(makeQuestion.countryNum)
             right.text = ((right.text as String).toInt() + 1).toString()
         } else {
             val rightButton = clicked(makeQuestion.rightAnsPlace)
             val wrongButton = clicked(choice)
             assert(rightButton != null)
-            rightButton!!.background = context.getDrawable(R.drawable.button_right)
+            rightButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             assert(wrongButton != null)
-            wrongButton!!.background = context.getDrawable(R.drawable.button_wrong)
+            wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
             Game.data?.size?.rem(makeQuestion.countryNum)
             wrong.text = ((wrong.text as String).toInt() + 1).toString()
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     constructor(
         context: Context,
         c1: ImageButton?,
@@ -70,16 +68,16 @@ class AnswerChecker {
         ci4 = c4
         if (choice == makeQuestion.rightAnsPlace) {
             val rightButton = clickedI(choice)!!
-            rightButton.background = context.getDrawable(R.drawable.button_right)
+            rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
             right.text = ((right.text as String).toInt() + 1).toString()
         } else {
             val rightButton = clickedI(makeQuestion.rightAnsPlace)
             val wrongButton = clickedI(choice)
             assert(rightButton != null)
-            rightButton!!.background = context.getDrawable(R.drawable.button_right)
+            rightButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             assert(wrongButton != null)
-            wrongButton!!.background = context.getDrawable(R.drawable.button_wrong)
+            wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
             wrong.text = ((wrong.text as String).toInt() + 1).toString()
         }

@@ -1,17 +1,17 @@
 package com.teknos.flags.database
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.ImageView
 import android.widget.Button
 import com.teknos.flags.R
 import android.widget.TextView
 import android.widget.ImageButton
+import androidx.appcompat.content.res.AppCompatResources
 import com.teknos.flags.Game
 import com.teknos.flags.OppositeGame
 
 class SetQuestion {
-    @SuppressLint("UseCompatLoadingForDrawables")
+
     constructor(
         context: Context,
         flag: ImageView,
@@ -21,10 +21,10 @@ class SetQuestion {
         c4: Button,
         makeQuestion: MakeQuestion
     ) {
-        c1.background = context.getDrawable(R.drawable.button)
-        c2.background = context.getDrawable(R.drawable.button)
-        c3.background = context.getDrawable(R.drawable.button)
-        c4.background = context.getDrawable(R.drawable.button)
+        c1.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c2.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c3.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
         makeQuestion.normalMode()
         flag.setImageResource(Game.getResId(makeQuestion.imageName))
         c1.text = makeQuestion.choices[0]
@@ -37,7 +37,6 @@ class SetQuestion {
         c4.isClickable = true
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     constructor(
         context: Context,
         country: TextView,
@@ -47,10 +46,10 @@ class SetQuestion {
         c4: ImageButton,
         makeQuestion: MakeQuestion
     ) {
-        c1.background = context.getDrawable(R.drawable.button)
-        c2.background = context.getDrawable(R.drawable.button)
-        c3.background = context.getDrawable(R.drawable.button)
-        c4.background = context.getDrawable(R.drawable.button)
+        c1.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c2.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c3.background = AppCompatResources.getDrawable(context, R.drawable.button)
+        c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
         makeQuestion.oppositeMode()
         country.text = makeQuestion.imageName
         c1.setImageResource(OppositeGame.getResId(makeQuestion.choices[0]))

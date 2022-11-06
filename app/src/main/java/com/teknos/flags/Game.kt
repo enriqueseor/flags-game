@@ -100,7 +100,7 @@ class Game : AppCompatActivity() {
     }
 
     private fun finished(): Boolean {
-        if (data!!.isEmpty()) {
+        if (data?.isEmpty()!!) {
             choices!!.visibility = View.INVISIBLE
             won!!.visibility = View.VISIBLE
             flag!!.visibility = View.INVISIBLE
