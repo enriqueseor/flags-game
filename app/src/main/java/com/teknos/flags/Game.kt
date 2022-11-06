@@ -42,6 +42,7 @@ class Game : AppCompatActivity() {
         WidthHeight(this, 355, 40, 700, 60, choice1!!, choice2!!, choice3!!, choice4!!)
         makeQuestion = MakeQuestion(mode!!, "Game")
         SetQuestion(this, flag!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
+        choice()
     }
 
     private fun next() {
@@ -76,6 +77,28 @@ class Game : AppCompatActivity() {
         won = findViewById(R.id.wonLayout)
     }
 
+    private fun choice(){
+        choice1?.setOnClickListener {
+            AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 0, right!!, wrong!!)
+            next()
+        }
+
+        choice2?.setOnClickListener {
+            AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 1, right!!, wrong!!)
+            next()
+        }
+
+        choice3?.setOnClickListener {
+            AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 2, right!!, wrong!!)
+            next()
+        }
+
+        choice4?.setOnClickListener {
+            AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 3, right!!, wrong!!)
+            next()
+        }
+    }
+
     private fun finished(): Boolean {
         if (data!!.isEmpty()) {
             choices!!.visibility = View.INVISIBLE
@@ -84,26 +107,6 @@ class Game : AppCompatActivity() {
             return true
         }
         return false
-    }
-
-    fun choice1(view: View?) {
-        AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 0, right!!, wrong!!)
-        next()
-    }
-
-    fun choice2(view: View?) {
-        AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 1, right!!, wrong!!)
-        next()
-    }
-
-    fun choice3(view: View?) {
-        AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 2, right!!, wrong!!)
-        next()
-    }
-
-    fun choice4(view: View?) {
-        AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 3, right!!, wrong!!)
-        next()
     }
 
     companion object {
