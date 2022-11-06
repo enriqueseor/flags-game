@@ -15,4 +15,6 @@
     <string name="third_choice">Third choice</string>
     <string name="fourth_choice">Fourth choice</string>
     <string name="you_did_it">You dit it</string>
+    <string name="crown">Crown</string>
+    <string name="name">Name</string>
 </resources>

@@ -65,8 +65,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:targetApi="o" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/rightCount"
@@ -83,8 +82,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:targetApi="o" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/wrongCount"
@@ -101,8 +99,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:targetApi="o" />
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
@@ -114,7 +111,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:contentDescription="@string/the_flag"
-            app:srcCompat="@drawable/us" />
+            app:srcCompat="@drawable/es" />
 
         <LinearLayout
             android:id="@+id/choicesLayout"
@@ -132,19 +129,14 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="25dp"
                 android:autoSizeTextType="uniform"
+                android:onClick="choice1"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
                 android:longClickable="false"
-                android:onClick="choice1"
-                android:paddingLeft="8dp"
-                android:paddingTop="5dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+                android:textColor="@android:color/secondary_text_light" />
 
             <Button
                 android:id="@+id/c2"
@@ -154,19 +146,14 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="25dp"
                 android:autoSizeTextType="uniform"
+                android:onClick="choice2"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
                 android:longClickable="false"
-                android:onClick="choice2"
-                android:paddingLeft="8dp"
-                android:paddingTop="5dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+                android:textColor="@android:color/secondary_text_light" />
 
             <Button
                 android:id="@+id/c3"
@@ -176,19 +163,14 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="25dp"
                 android:autoSizeTextType="uniform"
+                android:onClick="choice3"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
                 android:longClickable="false"
-                android:onClick="choice3"
-                android:paddingLeft="8dp"
-                android:paddingTop="5dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+                android:textColor="@android:color/secondary_text_light"/>
 
             <Button
                 android:id="@+id/c4"
@@ -197,19 +179,14 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:autoSizeTextType="uniform"
+                android:onClick="choice4"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
                 android:longClickable="false"
-                android:onClick="choice4"
-                android:paddingLeft="8dp"
-                android:paddingTop="5dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+                android:textColor="@android:color/secondary_text_light" />
         </LinearLayout>
 
     </LinearLayout>

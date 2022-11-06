@@ -17,17 +17,12 @@
             android:autoSizeTextType="uniform"
             android:fontFamily="@font/new_comic_title"
             android:gravity="center"
-            android:paddingLeft="2dp"
-            android:paddingTop="2dp"
-            android:paddingRight="2dp"
-            android:paddingBottom="2dp"
             android:text="@string/guess_the"
             android:textAlignment="center"
             android:textColor="@color/fontColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="UnusedAttribute" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:id="@+id/country"
@@ -40,16 +35,15 @@
             android:background="@drawable/menu_button"
             android:fontFamily="@font/new_comic_title"
             android:gravity="center"
-            android:onClick="flagToCountryMode"
             android:text="@string/country"
             android:textAlignment="center"
+            android:onClick="flagToCapitalMode"
             android:textAllCaps="false"
             android:textColor="#370617"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guess"
-            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+            app:layout_constraintTop_toBottomOf="@+id/guess"/>
 
         <Button
             android:id="@+id/capital"
@@ -70,8 +64,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/country"
-            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+            app:layout_constraintTop_toBottomOf="@+id/country"/>
 
         <Button
             android:id="@+id/flag1"
@@ -92,8 +85,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/capital"
-            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+            app:layout_constraintTop_toBottomOf="@+id/capital"/>
 
         <Button
             android:id="@+id/flag2"
@@ -114,7 +106,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flag1"
-            tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+            app:layout_constraintTop_toBottomOf="@+id/flag1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

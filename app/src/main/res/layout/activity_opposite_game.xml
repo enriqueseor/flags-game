@@ -117,15 +117,14 @@
                 android:autoSizeMinTextSize="40sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="@font/roboto_medium"
-                android:text="Andorra"
+                android:text="@string/name"
                 android:textAlignment="center"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,UnusedAttribute" />
+                app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -142,13 +141,9 @@
                 android:layout_marginEnd="236dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/first_choice"
-                android:onClick="choice1"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ad"
-                tools:ignore="UsingOnClickInXml" />
+                app:srcCompat="@drawable/es" />
 
             <ImageButton
                 android:id="@+id/c2"
@@ -158,13 +153,9 @@
                 android:layout_marginTop="32dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/second_choice"
-                android:onClick="choice2"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ad"
-                tools:ignore="UsingOnClickInXml" />
+                app:srcCompat="@drawable/es"/>
 
             <ImageButton
                 android:id="@+id/c3"
@@ -175,14 +166,10 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/third_choice"
-                android:onClick="choice3"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c1"
-                app:srcCompat="@drawable/ad"
-                tools:ignore="UsingOnClickInXml" />
+                app:srcCompat="@drawable/es"/>
 
             <ImageButton
                 android:id="@+id/c4"
@@ -193,14 +180,10 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/fourth_choice"
-                android:onClick="choice4"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c2"
-                app:srcCompat="@drawable/ad"
-                tools:ignore="UsingOnClickInXml" />
+                app:srcCompat="@drawable/es"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -227,7 +210,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/crown"
-            tools:ignore="ContentDescription" />
+            android:contentDescription="@string/crown" />
 
         <TextView
             android:id="@+id/master"
@@ -244,8 +227,7 @@
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/crown"
-            tools:ignore="UnusedAttribute" />
+            app:layout_constraintTop_toBottomOf="@+id/crown"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
