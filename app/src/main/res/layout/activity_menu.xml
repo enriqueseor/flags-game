@@ -9,20 +9,25 @@
 
         <TextView
             android:id="@+id/guess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="53dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="53dp"
+            android:layout_width="295dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeMinTextSize="50sp"
+            android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="@font/new_comic_title"
             android:gravity="center"
             android:text="@string/guess_the"
             android:textAlignment="center"
             android:textColor="@color/fontColor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
 
         <Button
             android:id="@+id/country"
