@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.teknos.flags.menu.WidthHeight
 import com.teknos.flags.database.SetQuestion
 import com.teknos.flags.database.DataRetriever
 import java.util.ArrayList
@@ -39,7 +38,6 @@ class Game : AppCompatActivity() {
         setContentView(R.layout.activity_game)
         mode = Singleton.type
         assignVars()
-        WidthHeight(this, 355, 40, 700, 60, choice1!!, choice2!!, choice3!!, choice4!!)
         makeQuestion = MakeQuestion(mode!!, "Game")
         SetQuestion(this, flag!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
         choice()
@@ -82,17 +80,14 @@ class Game : AppCompatActivity() {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 0, right!!, wrong!!)
             next()
         }
-
         choice2?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 1, right!!, wrong!!)
             next()
         }
-
         choice3?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 2, right!!, wrong!!)
             next()
         }
-
         choice4?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 3, right!!, wrong!!)
             next()

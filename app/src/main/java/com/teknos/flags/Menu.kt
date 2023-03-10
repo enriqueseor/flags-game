@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.teknos.flags.menu.IntroMenu
 import android.view.View
 import android.content.Intent
 import com.teknos.flags.singleton.Singleton
@@ -21,7 +20,6 @@ class Menu : AppCompatActivity() {
         val flag1 = findViewById<Button>(R.id.flag1)
         val flag2 = findViewById<Button>(R.id.flag2)
         val guess = findViewById<TextView>(R.id.guess)
-        IntroMenu(this, guess, country, capital, flag1, flag2)
     }
 
     fun flagToCountryMode(view: View?) {

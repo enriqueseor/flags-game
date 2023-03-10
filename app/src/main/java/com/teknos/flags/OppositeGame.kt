@@ -8,7 +8,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.teknos.flags.menu.WidthHeight
 import com.teknos.flags.database.SetQuestion
 import com.teknos.flags.database.DataRetriever
 import java.util.ArrayList
@@ -38,7 +37,6 @@ class OppositeGame : AppCompatActivity() {
         setContentView(R.layout.activity_opposite_game)
         mode = Singleton.type
         assignVars()
-        WidthHeight(this)
         makeQuestion = MakeQuestion(mode!!, "Opposite")
         SetQuestion(this, country!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
         choice()
