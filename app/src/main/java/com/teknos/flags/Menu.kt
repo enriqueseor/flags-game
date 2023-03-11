@@ -2,8 +2,6 @@ package com.teknos.flags
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import android.view.View
 import android.content.Intent
 import com.teknos.flags.singleton.Singleton
@@ -15,11 +13,6 @@ class Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        val country = findViewById<Button>(R.id.country)
-        val capital = findViewById<Button>(R.id.capital)
-        val flag1 = findViewById<Button>(R.id.flag1)
-        val flag2 = findViewById<Button>(R.id.flag2)
-        val guess = findViewById<TextView>(R.id.guess)
     }
 
     fun flagToCountryMode(view: View?) {

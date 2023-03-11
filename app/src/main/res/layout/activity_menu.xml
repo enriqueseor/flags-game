@@ -38,7 +38,7 @@
             android:gravity="center"
             android:text="@string/country"
             android:textAlignment="center"
-            android:onClick="flagToCapitalMode"
+            android:onClick="flagToCountryMode"
             android:textAllCaps="false"
             android:textColor="#370617"/>
 
