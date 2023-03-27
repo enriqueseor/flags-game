@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyGameBackground"
     tools:context=".Game">
 
     <LinearLayout
@@ -113,7 +114,7 @@
             android:contentDescription="@string/the_flag"
             app:srcCompat="@drawable/ad" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/choicesLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -123,92 +124,76 @@
 
             <Button
                 android:id="@+id/c1"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:autoSizeTextType="uniform"
-                android:autoSizeMaxTextSize="50sp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/c2"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:autoSizeTextType="uniform"
-                android:autoSizeMaxTextSize="50sp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
+                android:textColor="@android:color/secondary_text_light"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/c3"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:autoSizeTextType="uniform"
-                android:autoSizeMaxTextSize="50sp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"/>
+                android:textColor="@android:color/secondary_text_light"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/c4"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:autoSizeTextType="uniform"
-                android:autoSizeMaxTextSize="50sp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center|center_horizontal"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light" />
-        </LinearLayout>
+                android:textColor="@android:color/secondary_text_light"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

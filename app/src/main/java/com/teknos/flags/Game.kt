@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.Button
 import android.widget.TextView
-import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import android.os.Bundle
 import android.os.Handler
@@ -30,8 +29,7 @@ class Game : AppCompatActivity() {
     private var choice4: Button? = null
     private var right: TextView? = null
     private var wrong: TextView? = null
-    private var choices: LinearLayout? = null
-    private var won: ConstraintLayout? = null
+    private var choices: ConstraintLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,7 +94,6 @@ class Game : AppCompatActivity() {
     private fun finished(): Boolean {
         if (data?.isEmpty()!!) {
             choices!!.visibility = View.INVISIBLE
-            won!!.visibility = View.VISIBLE
             flag!!.visibility = View.INVISIBLE
             return true
         }

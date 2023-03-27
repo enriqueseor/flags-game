@@ -8,4 +8,5 @@
     <color name="choiceButton">#E9E9E9</color>
     <color name="strokeRightColor">#6AAB33</color>
     <color name="strokeWrongColor">#D02C2D</color>
+    <color name="greyGameBackground">#d3d3d3</color>
 </resources>

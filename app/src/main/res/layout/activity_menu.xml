@@ -11,26 +11,23 @@
             android:id="@+id/guess"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="100dp"
             android:autoSizeTextType="uniform"
             android:gravity="center"
             android:text="@string/guess_the"
             android:fontFamily="@font/new_comic_title"
             android:textAlignment="center"
             android:textColor="@color/fontColor"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
 
         <Button
             android:id="@+id/country"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="20dp"
             android:autoSizeTextType="uniform"
             android:background="@drawable/menu_button"
             android:fontFamily="@font/new_comic_title"
@@ -40,18 +37,17 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#370617"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guess" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/capital"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="20dp"
             android:autoSizeTextType="uniform"
             android:background="@drawable/menu_button"
             android:fontFamily="@font/new_comic_title"
@@ -61,18 +57,18 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#370617"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/country" />
 
         <Button
             android:id="@+id/flag1"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="20dp"
             android:autoSizeTextType="uniform"
             android:background="@drawable/menu_button"
             android:fontFamily="@font/new_comic_title"
@@ -82,18 +78,18 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#370617"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/capital" />
 
         <Button
             android:id="@+id/flag2"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="20dp"
             android:autoSizeTextType="uniform"
             android:background="@drawable/menu_button"
             android:fontFamily="@font/new_comic_title"
@@ -103,9 +99,12 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#370617"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/flag1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
