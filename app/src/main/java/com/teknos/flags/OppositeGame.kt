@@ -70,7 +70,6 @@ class OppositeGame : AppCompatActivity() {
         choice4 = findViewById(R.id.c4)
         right = findViewById(R.id.rightCount)
         wrong = findViewById(R.id.wrongCount)
-        won = findViewById(R.id.wonLayout)
         choices = findViewById(R.id.choicesLayout)
     }
 

@@ -72,7 +72,6 @@ class Game : AppCompatActivity() {
         right = findViewById(R.id.rightCount)
         wrong = findViewById(R.id.wrongCount)
         choices = findViewById(R.id.choicesLayout)
-        won = findViewById(R.id.wonLayout)
     }
 
     private fun choice(){

@@ -135,99 +135,66 @@
 
             <ImageButton
                 android:id="@+id/c1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="236dp"
+                android:layout_marginEnd="230dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/first_choice"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/es" />
+                app:srcCompat="@drawable/ad" />
 
             <ImageButton
                 android:id="@+id/c2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="236dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="230dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/second_choice"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/es"/>
+                app:srcCompat="@drawable/ad"/>
 
             <ImageButton
                 android:id="@+id/c3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="236dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="230dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/third_choice"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c1"
-                app:srcCompat="@drawable/es"/>
+                app:srcCompat="@drawable/ad"/>
 
             <ImageButton
                 android:id="@+id/c4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="236dp"
-                android:layout_marginTop="30dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button"
                 android:contentDescription="@string/fourth_choice"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c2"
-                app:srcCompat="@drawable/es"/>
+                app:srcCompat="@drawable/ad"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/wonLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/crown"
-            android:layout_width="163dp"
-            android:layout_height="144dp"
-            android:layout_marginTop="100dp"
-            android:scaleType="centerInside"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/crown"
-            android:contentDescription="@string/crown" />
-
-        <TextView
-            android:id="@+id/master"
-            android:layout_width="197dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="30dp"
-            android:autoSizeMaxTextSize="80sp"
-            android:autoSizeMinTextSize="40sp"
-            android:autoSizeTextType="uniform"
-            android:fontFamily="@font/roboto_medium"
-            android:gravity="center"
-            android:text="@string/you_did_it"
-            android:textColor="@android:color/secondary_text_light"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/crown"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
