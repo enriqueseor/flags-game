@@ -38,7 +38,7 @@ class AnswerChecker {
             val rightButton = clicked(choice)!!
             rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             Game.data?.size?.rem(makeQuestion.countryNum)
-            right.text = ((right.text as String).toInt() + 1).toString()
+            right.setText((right.text as String).toInt() + 1).toString()
         } else {
             val rightButton = clicked(makeQuestion.rightAnsPlace)
             val wrongButton = clicked(choice)
@@ -47,7 +47,7 @@ class AnswerChecker {
             assert(wrongButton != null)
             wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
             Game.data?.size?.rem(makeQuestion.countryNum)
-            wrong.text = ((wrong.text as String).toInt() + 1).toString()
+            wrong.setText((wrong.text as String).toInt() + 1).toString()
         }
     }
 
@@ -70,7 +70,7 @@ class AnswerChecker {
             val rightButton = clickedI(choice)!!
             rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
-            right.text = ((right.text as String).toInt() + 1).toString()
+            right.setText((right.text as String).toInt() + 1).toString()
         } else {
             val rightButton = clickedI(makeQuestion.rightAnsPlace)
             val wrongButton = clickedI(choice)
@@ -79,7 +79,7 @@ class AnswerChecker {
             assert(wrongButton != null)
             wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
             OppositeGame.data?.size?.rem(makeQuestion.countryNum)
-            wrong.text = ((wrong.text as String).toInt() + 1).toString()
+            wrong.setText((wrong.text as String).toInt() + 1).toString()
         }
     }
 
