@@ -84,10 +84,6 @@ class AnswerChecker {
     }
 
     private fun clicked(choice: Int): Button? {
-        c1!!.isClickable = false
-        c2!!.isClickable = false
-        c3!!.isClickable = false
-        c4!!.isClickable = false
         return when (choice) {
             0 -> c1
             1 -> c2
