@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.teknos.flags.database.MakeQuestion
 import android.widget.TextView
 import android.widget.ImageButton
-import androidx.constraintlayout.widget.ConstraintLayout
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -12,7 +11,6 @@ import com.teknos.flags.database.SetQuestion
 import com.teknos.flags.database.DataRetriever
 import java.util.ArrayList
 import com.teknos.flags.database.Country
-import android.view.View
 import com.teknos.flags.database.AnswerChecker
 import com.teknos.flags.R.drawable
 import com.teknos.flags.singleton.Singleton
@@ -29,8 +27,6 @@ class OppositeGame : AppCompatActivity() {
     private var choice4: ImageButton? = null
     private var right: TextView? = null
     private var wrong: TextView? = null
-    private var won: ConstraintLayout? = null
-    private var choices: ConstraintLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,14 +66,10 @@ class OppositeGame : AppCompatActivity() {
         choice4 = findViewById(R.id.c4)
         right = findViewById(R.id.rightCount)
         wrong = findViewById(R.id.wrongCount)
-        choices = findViewById(R.id.choicesLayout)
     }
 
     private fun finished(): Boolean {
         if (data!!.isEmpty()) {
-            choices!!.visibility = View.INVISIBLE
-            won!!.visibility = View.VISIBLE
-            country!!.visibility = View.INVISIBLE
             return true
         }
         return false

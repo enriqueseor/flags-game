@@ -63,9 +63,6 @@ class MakeQuestion(mode: String, Activity: String) {
             size = OppositeGame.fullData!!.size
         }
         rightAnsPlace = random.nextInt(4)
-        wrongChoices[2] = id
-        wrongChoices[1] = wrongChoices[2]
-        wrongChoices[0] = wrongChoices[1]
         wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)
         wrongChoices[1] = getRandomChoice(wrongChoices[0], wrongChoices[2], size, id)
         wrongChoices[2] = getRandomChoice(wrongChoices[1], wrongChoices[0], size, id)

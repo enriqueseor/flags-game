@@ -31,10 +31,6 @@ class SetQuestion {
         c2.text = makeQuestion.choices[1]
         c3.text = makeQuestion.choices[2]
         c4.text = makeQuestion.choices[3]
-        c1.isClickable = true
-        c2.isClickable = true
-        c3.isClickable = true
-        c4.isClickable = true
     }
 
     constructor(
@@ -56,9 +52,5 @@ class SetQuestion {
         c2.setImageResource(OppositeGame.getResId(makeQuestion.choices[1]))
         c3.setImageResource(OppositeGame.getResId(makeQuestion.choices[2]))
         c4.setImageResource(OppositeGame.getResId(makeQuestion.choices[3]))
-        c1.isClickable = true
-        c2.isClickable = true
-        c3.isClickable = true
-        c4.isClickable = true
     }
 }
