@@ -13,8 +13,7 @@ class MakeQuestion(mode: String, Activity: String) {
     var countryNum = 0
 
     fun normalMode() {
-        choices[rightAnsPlace] =
-            if (mode == "FtoCo") Game.data?.get(countryNum)?.countryName else Game.data?.get(countryNum)?.capitalName
+        choices[rightAnsPlace] = if (mode == "FtoCo") Game.data?.get(countryNum)?.countryName else Game.data?.get(countryNum)?.capitalName
         imageName = Game.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
@@ -27,8 +26,7 @@ class MakeQuestion(mode: String, Activity: String) {
     }
 
     fun oppositeMode() {
-        imageName =
-            if (mode == "CotoF") OppositeGame.data?.get(countryNum)?.countryName else OppositeGame.data?.get(countryNum)?.capitalName
+        imageName = if (mode == "CotoF") OppositeGame.data?.get(countryNum)?.countryName else OppositeGame.data?.get(countryNum)?.capitalName
         choices[rightAnsPlace] = OppositeGame.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
@@ -65,6 +63,6 @@ class MakeQuestion(mode: String, Activity: String) {
         rightAnsPlace = random.nextInt(4)
         wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)
         wrongChoices[1] = getRandomChoice(wrongChoices[0], wrongChoices[2], size, id)
-        wrongChoices[2] = getRandomChoice(wrongChoices[1], wrongChoices[0], size, id)
+        wrongChoices[2] = getRandomChoice(wrongChoices[0], wrongChoices[1], size, id)
     }
 }
