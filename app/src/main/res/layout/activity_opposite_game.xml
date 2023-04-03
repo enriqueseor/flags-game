@@ -22,6 +22,7 @@
 
             <ImageView
                 android:id="@+id/right"
+                android:contentDescription="@string/number_of_right_answers"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
@@ -32,17 +33,16 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/right"
-                android:contentDescription="@string/number_of_right_answers" />
+                app:srcCompat="@drawable/right" />
 
             <ImageView
                 android:id="@+id/wrong"
+                android:contentDescription="@string/number_of_wrong_answers"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="28dp"
                 android:layout_marginBottom="22dp"
-                android:contentDescription="@string/number_of_wrong_answers"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -65,8 +65,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:ignore="UnusedAttribute" />
+                app:layout_constraintVertical_bias="1.0"/>
 
             <TextView
                 android:id="@+id/rightCount"
@@ -83,8 +82,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:ignore="UnusedAttribute" />
+                app:layout_constraintVertical_bias="1.0"/>
 
             <TextView
                 android:id="@+id/wrongCount"
@@ -101,8 +99,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:ignore="UnusedAttribute" />
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -117,7 +115,7 @@
                 android:autoSizeMinTextSize="40sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/country_name"
+                android:text="@string/the_name"
                 android:textAlignment="center"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="40sp"
