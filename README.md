@@ -20,8 +20,8 @@ Hay 4 modos diferentes de juego:
 3. Nombre país    --> bandera país (4 opciones)
 4. Nombre capital --> bandera país (4 opciones)
 
-![photo_2022-10-24_23-57-20](https://user-images.githubusercontent.com/101838134/197646940-862cde20-7d65-432b-b129-1c1bba38dde7.jpg)
-![photo_2022-10-24_23-57-21](https://user-images.githubusercontent.com/101838134/197646946-d008e10b-150f-454f-a6a6-c49e29622433.jpg)
-![photo_2022-10-24_23-57-22](https://user-images.githubusercontent.com/101838134/197646959-27e6a60e-dfc7-47ab-8c35-4db15b3a0d30.jpg)
-![photo_2022-10-24_23-57-23](https://user-images.githubusercontent.com/101838134/197646967-40d01cbc-62df-4d3a-9086-3243d7e09da8.jpg)
-![photo_2022-10-24_23-57-24](https://user-images.githubusercontent.com/101838134/197646971-42f521a9-7e12-4748-bed4-467971dd05ae.jpg)
+![Menu_flags](https://user-images.githubusercontent.com/101838134/229616927-c48b10d6-3dcc-4356-bcff-c4384b6a1bef.jpg)
+![Flag_to_Country](https://user-images.githubusercontent.com/101838134/229616952-e16c9263-4e6a-4e2b-8116-55821a2a1526.jpg)
+![Flag_to_Capital](https://user-images.githubusercontent.com/101838134/229616959-e4c1c3f8-f598-4e4b-8de9-1b02f8d120ea.jpg)
+![Country_to_flag](https://user-images.githubusercontent.com/101838134/229616970-4da6035a-6a36-483d-abcd-a38f28662787.jpg)
+![Capital_to_flag](https://user-images.githubusercontent.com/101838134/229616977-bbbc02c3-ccd7-4850-b47f-8f165b39ffc4.jpg)
