@@ -10,5 +10,5 @@
 
     <color name="strokeRightColor">#6AAB33</color>
     <color name="strokeWrongColor">#D02C2D</color>
-    <color name="greyGameBackground">#d3d3d3</color>
+    <color name="grey">#d3d3d3</color>
 </resources>
