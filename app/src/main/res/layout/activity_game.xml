@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="99dp"
-            android:background="@color/colorPrimary">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/right"
@@ -118,7 +118,7 @@
             android:id="@+id/choicesLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
+            android:background="@color/white"
             android:gravity="center"
             android:orientation="vertical">
 

@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="99dp"
-            android:background="@color/colorPrimary">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/right"
@@ -117,7 +117,7 @@
                 android:autoSizeMinTextSize="40sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/name"
+                android:text="@string/country_name"
                 android:textAlignment="center"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="40sp"
@@ -131,7 +131,7 @@
             android:id="@+id/choicesLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
+            android:background="@color/white">
 
             <ImageButton
                 android:id="@+id/c1"

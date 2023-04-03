@@ -2,7 +2,6 @@ package com.teknos.flags
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.content.Intent
 import android.widget.Button
 import com.teknos.flags.singleton.Singleton

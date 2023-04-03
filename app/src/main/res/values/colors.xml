@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#FF9800</color>
-    <color name="colorAccent">#FF951F</color>
-    <color name="fontColor">#AE0032</color>
-    <color name="menuButton">#FF9800</color>
-    <color name="choiceButton">#E9E9E9</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/orange</color>
+    <color name="colorAccent">@color/red</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#AE0032</color>
+    <color name="orange">#FF9800</color>
+
     <color name="strokeRightColor">#6AAB33</color>
     <color name="strokeWrongColor">#D02C2D</color>
     <color name="greyGameBackground">#d3d3d3</color>
