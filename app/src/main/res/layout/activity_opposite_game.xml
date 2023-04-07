@@ -103,15 +103,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="248dp">
+            android:layout_height="248dp"
+            android:background="@color/grey">
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoSizeMaxTextSize="80sp"
-                android:autoSizeMinTextSize="40sp"
-                android:autoSizeTextType="uniform"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/the_name"
                 android:textAlignment="center"
