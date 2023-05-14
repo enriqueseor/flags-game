@@ -18,8 +18,7 @@ class MakeQuestion(mode: String, Activity: String) {
         var j = 0
         for (i in 0..3) {
             if (choices[i] == null) {
-                choices[i] =
-                    if (mode == "FtoCo") Game.fullData?.get(wrongChoices[j])?.countryName else Game.fullData?.get(wrongChoices[j])?.capitalName
+                choices[i] = if (mode == "FtoCo") Game.fullData?.get(wrongChoices[j])?.countryName else Game.fullData?.get(wrongChoices[j])?.capitalName
                 j++
             }
         }

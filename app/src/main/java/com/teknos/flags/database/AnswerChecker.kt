@@ -46,7 +46,7 @@ class AnswerChecker {
             rightButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             assert(wrongButton != null)
             wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
-            Game.data?.size?.rem(makeQuestion.countryNum)
+            Game.data?.size?.rem(makeQuestion.countryNum+1)
             ((wrong.text as String).toInt() + 1).toString().also { wrong.text = it }
         }
     }
@@ -69,7 +69,7 @@ class AnswerChecker {
         if (choice == makeQuestion.rightAnsPlace) {
             val rightButton = clickedI(choice)!!
             rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
-            OppositeGame.data?.size?.rem(makeQuestion.countryNum)
+            OppositeGame.data?.size?.rem(makeQuestion.countryNum+1)
             ((right.text as String).toInt() + 1).toString().also { right.text = it }
         } else {
             val rightButton = clickedI(makeQuestion.rightAnsPlace)
