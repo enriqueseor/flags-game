@@ -6,10 +6,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import com.teknos.flags.R
-import com.teknos.flags.Game
-import com.teknos.flags.OppositeGame
 
 class AnswerChecker {
+
     private var c1: Button? = null
     private var c2: Button? = null
     private var c3: Button? = null
@@ -37,7 +36,6 @@ class AnswerChecker {
         if (choice == makeQuestion.rightAnsPlace) {
             val rightButton = clicked(choice)!!
             rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
-            Game.data?.size?.rem(makeQuestion.countryNum)
             ((right.text as String).toInt() + 1).toString().also { right.text = it }
         } else {
             val rightButton = clicked(makeQuestion.rightAnsPlace)
@@ -46,30 +44,28 @@ class AnswerChecker {
             rightButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             assert(wrongButton != null)
             wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
-            Game.data?.size?.rem(makeQuestion.countryNum+1)
             ((wrong.text as String).toInt() + 1).toString().also { wrong.text = it }
         }
     }
 
     constructor(
         context: Context,
-        c1: ImageButton?,
-        c2: ImageButton?,
-        c3: ImageButton?,
-        c4: ImageButton?,
+        ci1: ImageButton?,
+        ci2: ImageButton?,
+        ci3: ImageButton?,
+        ci4: ImageButton?,
         makeQuestion: MakeQuestion,
         choice: Int,
         right: TextView,
         wrong: TextView
     ) {
-        ci1 = c1
-        ci2 = c2
-        ci3 = c3
-        ci4 = c4
+        this.ci1 = ci1
+        this.ci2 = ci2
+        this.ci3 = ci3
+        this.ci4 = ci4
         if (choice == makeQuestion.rightAnsPlace) {
             val rightButton = clickedI(choice)!!
             rightButton.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
-            OppositeGame.data?.size?.rem(makeQuestion.countryNum+1)
             ((right.text as String).toInt() + 1).toString().also { right.text = it }
         } else {
             val rightButton = clickedI(makeQuestion.rightAnsPlace)
@@ -78,7 +74,6 @@ class AnswerChecker {
             rightButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_right)
             assert(wrongButton != null)
             wrongButton!!.background = AppCompatResources.getDrawable(context, R.drawable.button_wrong)
-            OppositeGame.data?.size?.rem(makeQuestion.countryNum)
             ((wrong.text as String).toInt() + 1).toString().also { wrong.text = it }
         }
     }

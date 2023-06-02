@@ -5,8 +5,10 @@ import android.database.sqlite.SQLiteOpenHelper
 import java.util.ArrayList
 
 class DataRetriever(context: Context?, mode: String) {
+
     private val openHelper: SQLiteOpenHelper
     private val mode: String
+
     val data: List<Country>
         get() {
             val database = openHelper.readableDatabase
