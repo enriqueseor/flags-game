@@ -22,7 +22,6 @@
 
             <ImageView
                 android:id="@+id/right"
-                android:contentDescription="@string/number_of_right_answers"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
@@ -33,11 +32,11 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/right" />
+                app:srcCompat="@drawable/right"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/wrong"
-                android:contentDescription="@string/number_of_wrong_answers"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="22dp"
@@ -48,7 +47,8 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/wrong" />
+                app:srcCompat="@drawable/wrong"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -132,7 +132,6 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:contentDescription="@string/first_choice"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:padding="5dp"
@@ -142,14 +141,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ad" />
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/c2"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:contentDescription="@string/second_choice"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:padding="5dp"
@@ -159,14 +158,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ad"/>
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/c3"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:contentDescription="@string/third_choice"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
                 android:padding="5dp"
@@ -177,14 +176,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c1"
-                app:srcCompat="@drawable/ad"/>
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/c4"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:contentDescription="@string/fourth_choice"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:padding="5dp"
@@ -195,7 +194,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/c2"
-                app:srcCompat="@drawable/ad"/>
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -103,14 +103,14 @@
 
         <ImageView
             android:id="@+id/FlagImage"
-            android:contentDescription="@string/the_flag"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
-            app:srcCompat="@drawable/ad" />
+            app:srcCompat="@drawable/ad"
+            tools:ignore="ContentDescription" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/choicesLayout"
