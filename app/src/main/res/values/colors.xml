@@ -5,8 +5,8 @@
     <color name="colorAccent">@color/red</color>
 
     <color name="white">#FFFFFF</color>
-    <color name="red">#AE0032</color>
     <color name="orange">#FF9800</color>
+    <color name="red">#AE0032</color>
 
     <color name="strokeRightColor">#6AAB33</color>
     <color name="strokeWrongColor">#D02C2D</color>
