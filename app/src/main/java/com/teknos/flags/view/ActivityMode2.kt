@@ -1,19 +1,17 @@
 package com.teknos.flags.view
 
 import androidx.appcompat.app.AppCompatActivity
-import com.teknos.flags.data.MakeQuestion
 import android.widget.TextView
 import android.widget.ImageButton
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.teknos.flags.R
-import com.teknos.flags.data.SetQuestion
-import com.teknos.flags.data.DataRetriever
+import com.teknos.flags.data.database.DataRetriever
 import java.util.ArrayList
-import com.teknos.flags.model.Country
-import com.teknos.flags.data.AnswerChecker
 import com.teknos.flags.R.drawable
+import com.teknos.flags.data.model.Country
+import com.teknos.flags.data.model.MakeQuestion
 import java.lang.Exception
 
 class ActivityMode2 : AppCompatActivity() {

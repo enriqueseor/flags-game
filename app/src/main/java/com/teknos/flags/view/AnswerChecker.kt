@@ -1,4 +1,4 @@
-package com.teknos.flags.data
+package com.teknos.flags.view
 
 import android.content.Context
 import android.widget.Button
@@ -6,6 +6,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import com.teknos.flags.R
+import com.teknos.flags.data.model.MakeQuestion
 
 class AnswerChecker {
 

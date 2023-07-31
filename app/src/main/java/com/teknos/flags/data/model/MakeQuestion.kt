@@ -1,4 +1,4 @@
-package com.teknos.flags.data
+package com.teknos.flags.data.model
 
 import com.teknos.flags.view.ActivityMode1
 import com.teknos.flags.view.ActivityMode2
