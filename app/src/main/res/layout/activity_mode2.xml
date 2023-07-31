@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
-    tools:context=".ActivityGame">
+    tools:context=".view.ActivityMode1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +32,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/right"/>
+                app:srcCompat="@drawable/right"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/wrong"
@@ -47,7 +47,8 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/wrong"/>
+                app:srcCompat="@drawable/wrong"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -64,7 +65,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"/>
 
             <TextView
                 android:id="@+id/rightCount"
@@ -80,7 +81,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"/>
 
             <TextView
                 android:id="@+id/wrongCount"
@@ -97,98 +98,105 @@
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/FlagImage"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            app:srcCompat="@drawable/ad"
-            tools:ignore="ContentDescription" />
+            android:layout_height="248dp"
+            android:background="@color/grey">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/the_name"
+                android:textAlignment="center"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/choicesLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:background="@color/white">
 
-            <Button
+            <ImageButton
                 android:id="@+id/c1"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:autoSizeTextType="uniform"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center|center_horizontal"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintVertical_bias="0.2"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintVertical_bias="0.1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/c2"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:autoSizeTextType="uniform"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center|center_horizontal"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintVertical_bias="0.4"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintVertical_bias="0.1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/c3"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:autoSizeTextType="uniform"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center|center_horizontal"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintVertical_bias="0.6"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintVertical_bias="0.9"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/c1"
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/c4"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:autoSizeTextType="uniform"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:background="@drawable/button"
-                android:fontFamily="@font/roboto_regular"
-                android:gravity="center|center_horizontal"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/secondary_text_light"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintVertical_bias="0.8"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintVertical_bias="0.9"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/c2"
+                app:srcCompat="@drawable/ad"
+                tools:ignore="ContentDescription" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

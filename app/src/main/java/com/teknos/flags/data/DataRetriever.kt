@@ -1,7 +1,8 @@
-package com.teknos.flags.database
+package com.teknos.flags.data
 
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper
+import com.teknos.flags.model.Country
 import java.util.ArrayList
 
 class DataRetriever(context: Context?, mode: String) {

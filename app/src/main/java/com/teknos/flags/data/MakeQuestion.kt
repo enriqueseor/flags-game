@@ -1,7 +1,7 @@
-package com.teknos.flags.database
+package com.teknos.flags.data
 
-import com.teknos.flags.ActivityGame
-import com.teknos.flags.ActivityOppositeGame
+import com.teknos.flags.view.ActivityMode1
+import com.teknos.flags.view.ActivityMode2
 import java.util.*
 
 class MakeQuestion(mode: String, Activity: String) {
@@ -13,24 +13,24 @@ class MakeQuestion(mode: String, Activity: String) {
     var countryNum = 0
 
     fun normalMode() {
-        choices[rightAnsPlace] = if (mode == "FtoCo") ActivityGame.data?.get(countryNum)?.countryName else ActivityGame.data?.get(countryNum)?.capitalName
-        imageName = ActivityGame.data?.get(countryNum)?.imageName
+        choices[rightAnsPlace] = if (mode == "FtoCo") ActivityMode1.data?.get(countryNum)?.countryName else ActivityMode1.data?.get(countryNum)?.capitalName
+        imageName = ActivityMode1.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
             if (choices[i] == null) {
-                choices[i] = if (mode == "FtoCo") ActivityGame.fullData?.get(wrongChoices[j])?.countryName else ActivityGame.fullData?.get(wrongChoices[j])?.capitalName
+                choices[i] = if (mode == "FtoCo") ActivityMode1.fullData?.get(wrongChoices[j])?.countryName else ActivityMode1.fullData?.get(wrongChoices[j])?.capitalName
                 j++
             }
         }
     }
 
     fun oppositeMode() {
-        imageName = if (mode == "CotoF") ActivityOppositeGame.data?.get(countryNum)?.countryName else ActivityOppositeGame.data?.get(countryNum)?.capitalName
-        choices[rightAnsPlace] = ActivityOppositeGame.data?.get(countryNum)?.imageName
+        imageName = if (mode == "CotoF") ActivityMode2.data?.get(countryNum)?.countryName else ActivityMode2.data?.get(countryNum)?.capitalName
+        choices[rightAnsPlace] = ActivityMode2.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
             if (choices[i] == null) {
-                choices[i] = ActivityOppositeGame.fullData?.get(wrongChoices[j])?.imageName
+                choices[i] = ActivityMode2.fullData?.get(wrongChoices[j])?.imageName
                 j++
             }
         }
@@ -51,13 +51,13 @@ class MakeQuestion(mode: String, Activity: String) {
         val id: Int
         val size: Int
         if (Activity == "Game") {
-            countryNum = random.nextInt(ActivityGame.data!!.size)
-            id = ActivityGame.data?.get(countryNum)!!.id
-            size = ActivityGame.fullData!!.size
+            countryNum = random.nextInt(ActivityMode1.data!!.size)
+            id = ActivityMode1.data?.get(countryNum)!!.id
+            size = ActivityMode1.fullData!!.size
         } else {
-            countryNum = random.nextInt(ActivityOppositeGame.data!!.size)
-            id = ActivityOppositeGame.data?.get(countryNum)!!.id
-            size = ActivityOppositeGame.fullData!!.size
+            countryNum = random.nextInt(ActivityMode2.data!!.size)
+            id = ActivityMode2.data?.get(countryNum)!!.id
+            size = ActivityMode2.fullData!!.size
         }
         rightAnsPlace = random.nextInt(4)
         wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)

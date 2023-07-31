@@ -1,4 +1,4 @@
-package com.teknos.flags.database
+package com.teknos.flags.data
 
 import android.content.Context
 import android.widget.ImageView
@@ -7,8 +7,8 @@ import com.teknos.flags.R
 import android.widget.TextView
 import android.widget.ImageButton
 import androidx.appcompat.content.res.AppCompatResources
-import com.teknos.flags.ActivityGame
-import com.teknos.flags.ActivityOppositeGame
+import com.teknos.flags.view.ActivityMode1
+import com.teknos.flags.view.ActivityMode2
 
 class SetQuestion {
 
@@ -26,7 +26,7 @@ class SetQuestion {
         c3.background = AppCompatResources.getDrawable(context, R.drawable.button)
         c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
         makeQuestion.normalMode()
-        flag.setImageResource(ActivityGame.getResId(makeQuestion.imageName))
+        flag.setImageResource(ActivityMode1.getResId(makeQuestion.imageName))
         c1.text = makeQuestion.choices[0]
         c2.text = makeQuestion.choices[1]
         c3.text = makeQuestion.choices[2]
@@ -48,9 +48,9 @@ class SetQuestion {
         c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
         makeQuestion.oppositeMode()
         country.text = makeQuestion.imageName
-        c1.setImageResource(ActivityOppositeGame.getResId(makeQuestion.choices[0]))
-        c2.setImageResource(ActivityOppositeGame.getResId(makeQuestion.choices[1]))
-        c3.setImageResource(ActivityOppositeGame.getResId(makeQuestion.choices[2]))
-        c4.setImageResource(ActivityOppositeGame.getResId(makeQuestion.choices[3]))
+        c1.setImageResource(ActivityMode2.getResId(makeQuestion.choices[0]))
+        c2.setImageResource(ActivityMode2.getResId(makeQuestion.choices[1]))
+        c3.setImageResource(ActivityMode2.getResId(makeQuestion.choices[2]))
+        c4.setImageResource(ActivityMode2.getResId(makeQuestion.choices[3]))
     }
 }
