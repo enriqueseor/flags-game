@@ -13,10 +13,9 @@ import java.util.ArrayList
 import com.teknos.flags.database.Country
 import com.teknos.flags.database.AnswerChecker
 import com.teknos.flags.R.drawable
-import com.teknos.flags.singleton.Singleton
 import java.lang.Exception
 
-class OppositeGame : AppCompatActivity() {
+class ActivityOppositeGame : AppCompatActivity() {
 
     private var mode: String? = null
     private var makeQuestion: MakeQuestion? = null
@@ -31,7 +30,7 @@ class OppositeGame : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opposite_game)
-        mode = Singleton.type
+        mode = intent.getStringExtra("MODE_TYPE")
         assignVars()
         makeQuestion = MakeQuestion(mode!!, "Opposite")
         SetQuestion(this, country!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
@@ -43,7 +42,7 @@ class OppositeGame : AppCompatActivity() {
             if (finished()) return@postDelayed
             makeQuestion = MakeQuestion(mode!!, "Opposite")
             SetQuestion(
-                this@OppositeGame,
+                this@ActivityOppositeGame,
                 country!!,
                 choice1!!,
                 choice2!!,

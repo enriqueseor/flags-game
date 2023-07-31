@@ -12,12 +12,12 @@ import com.teknos.flags.database.DataRetriever
 import java.util.ArrayList
 import com.teknos.flags.database.Country
 import com.teknos.flags.database.AnswerChecker
-import com.teknos.flags.singleton.Singleton
 import com.teknos.flags.database.MakeQuestion
 import com.teknos.flags.R.drawable
 import java.lang.Exception
 
-class Game : AppCompatActivity() {
+class ActivityGame : AppCompatActivity() {
+
     private var mode: String? = null
     private var makeQuestion: MakeQuestion? = null
     private var flag: ImageView? = null
@@ -31,7 +31,7 @@ class Game : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
-        mode = Singleton.type
+        mode = intent.getStringExtra("MODE_TYPE")
         assignVars()
         makeQuestion = MakeQuestion(mode!!, "Game")
         SetQuestion(this, flag!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
@@ -43,7 +43,7 @@ class Game : AppCompatActivity() {
             if (finished()) return@Runnable
             makeQuestion = MakeQuestion(mode!!, "Game")
             SetQuestion(
-                this@Game,
+                this@ActivityGame,
                 flag!!,
                 choice1!!,
                 choice2!!,

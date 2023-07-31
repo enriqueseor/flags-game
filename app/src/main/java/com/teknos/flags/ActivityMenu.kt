@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
-import com.teknos.flags.singleton.Singleton
 
-class Menu : AppCompatActivity() {
-
-    private var singleton: Singleton? = Singleton
+class ActivityMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,36 +20,40 @@ class Menu : AppCompatActivity() {
     private fun flagToCountryMode() {
         val btn = findViewById<Button>(R.id.country)
         btn.setOnClickListener {
-            val myIntent = Intent(this@Menu, Game::class.java)
-            singleton?.type = "FtoCo"
-            this@Menu.startActivity(myIntent)
+            startGameActivity("FtoCo")
         }
     }
 
     private fun flagToCapitalMode() {
         val btn = findViewById<Button>(R.id.capital)
         btn.setOnClickListener {
-            val myIntent = Intent(this@Menu, Game::class.java)
-            singleton?.type = "FtoCa"
-            this@Menu.startActivity(myIntent)
+            startGameActivity("FtoCa")
         }
     }
 
     private fun countryToFlagMode() {
         val btn = findViewById<Button>(R.id.flag1)
         btn.setOnClickListener {
-            val myIntent = Intent(this@Menu, OppositeGame::class.java)
-            singleton?.type = "CotoF"
-            this@Menu.startActivity(myIntent)
+            startOppositeGameActivity("CotoF")
         }
     }
 
     private fun capitalToFlagMode() {
         val btn = findViewById<Button>(R.id.flag2)
         btn.setOnClickListener {
-            val myIntent = Intent(this@Menu, OppositeGame::class.java)
-            singleton?.type = "CatoF"
-            this@Menu.startActivity(myIntent)
+            startOppositeGameActivity("CatoF")
         }
+    }
+
+    private fun startGameActivity(mode: String) {
+        val myIntent = Intent(this@ActivityMenu, ActivityGame::class.java)
+        myIntent.putExtra("MODE_TYPE", mode)
+        this@ActivityMenu.startActivity(myIntent)
+    }
+
+    private fun startOppositeGameActivity(mode: String) {
+        val myIntent = Intent(this@ActivityMenu, ActivityOppositeGame::class.java)
+        myIntent.putExtra("MODE_TYPE", mode)
+        this@ActivityMenu.startActivity(myIntent)
     }
 }

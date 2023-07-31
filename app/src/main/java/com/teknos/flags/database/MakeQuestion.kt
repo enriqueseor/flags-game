@@ -1,7 +1,7 @@
 package com.teknos.flags.database
 
-import com.teknos.flags.Game
-import com.teknos.flags.OppositeGame
+import com.teknos.flags.ActivityGame
+import com.teknos.flags.ActivityOppositeGame
 import java.util.*
 
 class MakeQuestion(mode: String, Activity: String) {
@@ -13,24 +13,24 @@ class MakeQuestion(mode: String, Activity: String) {
     var countryNum = 0
 
     fun normalMode() {
-        choices[rightAnsPlace] = if (mode == "FtoCo") Game.data?.get(countryNum)?.countryName else Game.data?.get(countryNum)?.capitalName
-        imageName = Game.data?.get(countryNum)?.imageName
+        choices[rightAnsPlace] = if (mode == "FtoCo") ActivityGame.data?.get(countryNum)?.countryName else ActivityGame.data?.get(countryNum)?.capitalName
+        imageName = ActivityGame.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
             if (choices[i] == null) {
-                choices[i] = if (mode == "FtoCo") Game.fullData?.get(wrongChoices[j])?.countryName else Game.fullData?.get(wrongChoices[j])?.capitalName
+                choices[i] = if (mode == "FtoCo") ActivityGame.fullData?.get(wrongChoices[j])?.countryName else ActivityGame.fullData?.get(wrongChoices[j])?.capitalName
                 j++
             }
         }
     }
 
     fun oppositeMode() {
-        imageName = if (mode == "CotoF") OppositeGame.data?.get(countryNum)?.countryName else OppositeGame.data?.get(countryNum)?.capitalName
-        choices[rightAnsPlace] = OppositeGame.data?.get(countryNum)?.imageName
+        imageName = if (mode == "CotoF") ActivityOppositeGame.data?.get(countryNum)?.countryName else ActivityOppositeGame.data?.get(countryNum)?.capitalName
+        choices[rightAnsPlace] = ActivityOppositeGame.data?.get(countryNum)?.imageName
         var j = 0
         for (i in 0..3) {
             if (choices[i] == null) {
-                choices[i] = OppositeGame.fullData?.get(wrongChoices[j])?.imageName
+                choices[i] = ActivityOppositeGame.fullData?.get(wrongChoices[j])?.imageName
                 j++
             }
         }
@@ -51,13 +51,13 @@ class MakeQuestion(mode: String, Activity: String) {
         val id: Int
         val size: Int
         if (Activity == "Game") {
-            countryNum = random.nextInt(Game.data!!.size)
-            id = Game.data?.get(countryNum)!!.id
-            size = Game.fullData!!.size
+            countryNum = random.nextInt(ActivityGame.data!!.size)
+            id = ActivityGame.data?.get(countryNum)!!.id
+            size = ActivityGame.fullData!!.size
         } else {
-            countryNum = random.nextInt(OppositeGame.data!!.size)
-            id = OppositeGame.data?.get(countryNum)!!.id
-            size = OppositeGame.fullData!!.size
+            countryNum = random.nextInt(ActivityOppositeGame.data!!.size)
+            id = ActivityOppositeGame.data?.get(countryNum)!!.id
+            size = ActivityOppositeGame.fullData!!.size
         }
         rightAnsPlace = random.nextInt(4)
         wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)
