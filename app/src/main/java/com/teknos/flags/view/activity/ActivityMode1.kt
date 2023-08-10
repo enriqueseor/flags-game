@@ -1,4 +1,4 @@
-package com.teknos.flags.view
+package com.teknos.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
@@ -13,6 +13,8 @@ import java.util.ArrayList
 import com.teknos.flags.R.drawable
 import com.teknos.flags.data.model.Country
 import com.teknos.flags.data.model.MakeQuestion
+import com.teknos.flags.view.util.AnswerChecker
+import com.teknos.flags.view.util.SetQuestion
 import java.lang.Exception
 
 class ActivityMode1 : AppCompatActivity() {
@@ -39,7 +41,6 @@ class ActivityMode1 : AppCompatActivity() {
 
     private fun next() {
         Handler(Looper.getMainLooper()).postDelayed(Runnable@{
-            if (finished()) return@Runnable
             makeQuestion = MakeQuestion(mode!!, "Game")
             SetQuestion(
                 this@ActivityMode1,
@@ -84,13 +85,6 @@ class ActivityMode1 : AppCompatActivity() {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 3, right!!, wrong!!)
             next()
         }
-    }
-
-    private fun finished(): Boolean {
-        if (data?.isEmpty()!!) {
-            return true
-        }
-        return false
     }
 
     companion object {

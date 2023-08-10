@@ -1,4 +1,4 @@
-package com.teknos.flags.view
+package com.teknos.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
@@ -12,6 +12,8 @@ import java.util.ArrayList
 import com.teknos.flags.R.drawable
 import com.teknos.flags.data.model.Country
 import com.teknos.flags.data.model.MakeQuestion
+import com.teknos.flags.view.util.AnswerChecker
+import com.teknos.flags.view.util.SetQuestion
 import java.lang.Exception
 
 class ActivityMode2 : AppCompatActivity() {
@@ -38,7 +40,6 @@ class ActivityMode2 : AppCompatActivity() {
 
     private fun next() {
         Handler(Looper.getMainLooper()).postDelayed({
-            if (finished()) return@postDelayed
             makeQuestion = MakeQuestion(mode!!, "Opposite")
             SetQuestion(
                 this@ActivityMode2,
@@ -64,13 +65,6 @@ class ActivityMode2 : AppCompatActivity() {
         choice4 = findViewById(R.id.c4)
         right = findViewById(R.id.rightCount)
         wrong = findViewById(R.id.wrongCount)
-    }
-
-    private fun finished(): Boolean {
-        if (data!!.isEmpty()) {
-            return true
-        }
-        return false
     }
 
     private fun choice(){

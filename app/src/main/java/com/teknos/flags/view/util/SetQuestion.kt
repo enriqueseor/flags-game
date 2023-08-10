@@ -1,4 +1,4 @@
-package com.teknos.flags.view
+package com.teknos.flags.view.util
 
 import android.content.Context
 import android.widget.ImageView
@@ -8,6 +8,8 @@ import android.widget.TextView
 import android.widget.ImageButton
 import androidx.appcompat.content.res.AppCompatResources
 import com.teknos.flags.data.model.MakeQuestion
+import com.teknos.flags.view.activity.ActivityMode1
+import com.teknos.flags.view.activity.ActivityMode2
 
 class SetQuestion {
 
@@ -24,7 +26,7 @@ class SetQuestion {
         c2.background = AppCompatResources.getDrawable(context, R.drawable.button)
         c3.background = AppCompatResources.getDrawable(context, R.drawable.button)
         c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
-        makeQuestion.normalMode()
+        makeQuestion.mode1()
         flag.setImageResource(ActivityMode1.getResId(makeQuestion.imageName))
         c1.text = makeQuestion.choices[0]
         c2.text = makeQuestion.choices[1]
@@ -45,7 +47,7 @@ class SetQuestion {
         c2.background = AppCompatResources.getDrawable(context, R.drawable.button)
         c3.background = AppCompatResources.getDrawable(context, R.drawable.button)
         c4.background = AppCompatResources.getDrawable(context, R.drawable.button)
-        makeQuestion.oppositeMode()
+        makeQuestion.mode2()
         country.text = makeQuestion.imageName
         c1.setImageResource(ActivityMode2.getResId(makeQuestion.choices[0]))
         c2.setImageResource(ActivityMode2.getResId(makeQuestion.choices[1]))

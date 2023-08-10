@@ -1,38 +1,35 @@
-package com.teknos.flags.view
+package com.teknos.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
 import com.teknos.flags.R
-import com.teknos.flags.presenter.MenuPresenter
 
 class ActivityMenu : AppCompatActivity() {
-    private lateinit var presenter: MenuPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        presenter = MenuPresenter(this)
         setupClickListeners()
     }
 
     private fun setupClickListeners() {
         findViewById<Button>(R.id.country).setOnClickListener {
-            presenter.onCountryModeClicked()
+            startMode1("FtoCo")
         }
 
         findViewById<Button>(R.id.capital).setOnClickListener {
-            presenter.onCapitalModeClicked()
+            startMode1("FtoCa")
         }
 
         findViewById<Button>(R.id.flag1).setOnClickListener {
-            presenter.onFlag1ModeClicked()
+            startMode2("CotoF")
         }
 
         findViewById<Button>(R.id.flag2).setOnClickListener {
-            presenter.onFlag2ModeClicked()
+            startMode2("CatoF")
         }
     }
 

@@ -1,4 +1,4 @@
-package com.teknos.flags.view
+package com.teknos.flags.view.util
 
 import android.content.Context
 import android.widget.Button

@@ -1,10 +1,11 @@
 package com.teknos.flags.data.model
 
-import com.teknos.flags.view.ActivityMode1
-import com.teknos.flags.view.ActivityMode2
+import com.teknos.flags.view.activity.ActivityMode1
+import com.teknos.flags.view.activity.ActivityMode2
 import java.util.*
 
 class MakeQuestion(mode: String, Activity: String) {
+
     private val wrongChoices = IntArray(3)
     private val mode: String
     val choices = arrayOfNulls<String>(4)
@@ -12,7 +13,7 @@ class MakeQuestion(mode: String, Activity: String) {
     var imageName: String? = null
     var countryNum = 0
 
-    fun normalMode() {
+    fun mode1() {
         choices[rightAnsPlace] = if (mode == "FtoCo") ActivityMode1.data?.get(countryNum)?.countryName else ActivityMode1.data?.get(countryNum)?.capitalName
         imageName = ActivityMode1.data?.get(countryNum)?.imageName
         var j = 0
@@ -24,7 +25,7 @@ class MakeQuestion(mode: String, Activity: String) {
         }
     }
 
-    fun oppositeMode() {
+    fun mode2() {
         imageName = if (mode == "CotoF") ActivityMode2.data?.get(countryNum)?.countryName else ActivityMode2.data?.get(countryNum)?.capitalName
         choices[rightAnsPlace] = ActivityMode2.data?.get(countryNum)?.imageName
         var j = 0

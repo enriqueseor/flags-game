@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ActivityMode2"
+        <activity android:name=".view.activity.ActivityMode2"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".view.ActivityMode1"
+        <activity android:name=".view.activity.ActivityMode1"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".view.ActivityMenu"
+        <activity android:name=".view.activity.ActivityMenu"
             android:screenOrientation="portrait"
             android:exported="true"
             tools:ignore="LockedOrientationActivity">
