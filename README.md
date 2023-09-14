@@ -62,4 +62,4 @@ If you are interested in contributing to the development of this app, you can fo
 
 ## License
 
-This project is open-source and licensed under [LICENSE_NAME]. You are welcome to use, modify, and distribute it as per the terms of the license.
+This project is open-source and licensed under [MIT License](LICENSE).
