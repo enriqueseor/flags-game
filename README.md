@@ -2,9 +2,11 @@
 
 ## Overview
 
-This project consists of a basic flag guessing app designed for Android. The app offers an engaging way for users to test their knowledge of countries and capitals by guessing the correct answers based on the given flags, country names, or capital names.
+This project consists of a basic flag guessing app designed for Android. 
+The app offers an engaging way for users to test their knowledge of countries and capitals 
+by guessing the correct answers based on the given flags, country names, or capital names.
 
-![Menu_flags](https://user-images.githubusercontent.com/101838134/229616927-c48b10d6-3dcc-4356-bcff-c4384b6a1bef.jpg)
+![MENU_FLAGS](images/MENU_FLAGS.png)
 
 ## Features
 
@@ -13,22 +15,22 @@ The app includes the following four different modes:
 1. **Country Flag Given --> Choose Country Name (4 Options):**
     - In this mode, users are presented with a flag of a country and must select the correct country name from a list of four options.
 
-![FToCo](https://user-images.githubusercontent.com/101838134/230610917-5261387b-c4bd-455d-b4b7-6fa3d088dd20.jpg)
+![FToCo](images/FToCo.png)
 
 2. **Country Flag Given --> Choose Capital Name (4 Options):**
     - In this mode, users are shown a flag of a country and are required to choose the corresponding capital city from a list of four options.
 
-![FToCa](https://user-images.githubusercontent.com/101838134/230610925-5ce52f4b-8e95-447b-b79a-e36b3819a08d.jpg)
+![FToCa](images/FToCa.png)
 
 3. **Country Name Given --> Choose Country Flag (4 Options):**
     - Users are given the name of a country and must select the correct flag for that country from a list of four options.
 
-![CoToF](https://user-images.githubusercontent.com/101838134/230610938-3dbf0de0-1bf0-40b6-a085-f101300def35.jpg)
+![CoToF](images/CoToF.png)
 
 4. **Capital Name Given --> Choose Country Flag (4 Options):**
     - In this mode, users are given the name of a capital city and must choose the flag of the country associated with that capital from a list of four options.
 
-![CaToF](https://user-images.githubusercontent.com/101838134/230610947-07cdf7a1-d75c-442c-8d70-f786d4bba716.jpg)
+![CaToF](images/CaToF.png)
 
 ## How to Use
 
