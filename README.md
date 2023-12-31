@@ -46,22 +46,6 @@ To use the app, follow these steps:
 
 5. Keep track of your score and aim to improve your knowledge.
 
-## Development
-
-If you are interested in contributing to the development of this app, you can follow these steps:
-
-1. Clone the repository to your local development environment.
-
-2. Make sure you have the necessary development tools and Android development environment set up.
-
-3. Explore the source code to understand the app's logic and structure.
-
-4. Make your desired improvements or add new features.
-
-5. Test the app thoroughly on different Android devices and versions.
-
-6. Submit pull requests with your changes or improvements.
-
 ## License
 
 This project is open-source and licensed under [MIT License](LICENSE).
