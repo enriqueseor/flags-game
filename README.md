@@ -48,4 +48,4 @@ To use the app, follow these steps:
 
 ## License
 
-This project is open-source and licensed under [MIT License](LICENSE).
+This project is open-source and licensed under [GNU General Public License v3.0](LICENSE).
