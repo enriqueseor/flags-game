@@ -1,14 +1,13 @@
-package com.teknos.flags.data.database
+package com.teknos.flags.database
 
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper
-import com.teknos.flags.data.model.Country
+import com.teknos.flags.model.Country
 import java.util.ArrayList
 
-class DataRetriever(context: Context?, mode: String) {
+class DataRetriever(context: Context?, private val mode: String) {
 
-    private val openHelper: SQLiteOpenHelper
-    private val mode: String
+    private val openHelper: SQLiteOpenHelper = DatabaseReader(context)
 
     val data: List<Country>
         get() {
@@ -35,9 +34,4 @@ class DataRetriever(context: Context?, mode: String) {
             database.close()
             return data
         }
-
-    init {
-        openHelper = DatabaseReader(context)
-        this.mode = mode
-    }
 }

@@ -8,13 +8,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.teknos.flags.R
-import com.teknos.flags.data.database.DataRetriever
+import com.teknos.flags.database.DataRetriever
 import java.util.ArrayList
 import com.teknos.flags.R.drawable
-import com.teknos.flags.data.model.Country
-import com.teknos.flags.data.model.MakeQuestion
-import com.teknos.flags.view.util.AnswerChecker
-import com.teknos.flags.view.util.SetQuestion
+import com.teknos.flags.model.Country
+import com.teknos.flags.view.logic.MakeQuestion
+import com.teknos.flags.view.logic.AnswerChecker
+import com.teknos.flags.view.logic.SetQuestion
 import java.lang.Exception
 
 class ActivityMode1 : AppCompatActivity() {

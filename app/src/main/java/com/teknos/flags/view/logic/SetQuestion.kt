@@ -1,4 +1,4 @@
-package com.teknos.flags.view.util
+package com.teknos.flags.view.logic
 
 import android.content.Context
 import android.widget.ImageView
@@ -7,7 +7,6 @@ import com.teknos.flags.R
 import android.widget.TextView
 import android.widget.ImageButton
 import androidx.appcompat.content.res.AppCompatResources
-import com.teknos.flags.data.model.MakeQuestion
 import com.teknos.flags.view.activity.ActivityMode1
 import com.teknos.flags.view.activity.ActivityMode2
 

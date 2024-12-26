@@ -1,4 +1,4 @@
-package com.teknos.flags.data.database
+package com.teknos.flags.database
 
 import android.content.Context
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper
