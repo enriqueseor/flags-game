@@ -4,14 +4,34 @@ import com.teknos.flags.view.activity.ActivityMode1
 import com.teknos.flags.view.activity.ActivityMode2
 import java.util.*
 
-class MakeQuestion(mode: String, Activity: String) {
+class MakeQuestion(mode: String, activity: String) {
 
     private val wrongChoices = IntArray(3)
     private val mode: String
     val choices = arrayOfNulls<String>(4)
     val rightAnsPlace: Int
     var imageName: String? = null
-    var countryNum = 0
+    private var countryNum = 0
+
+    init {
+        val random = Random()
+        this.mode = mode
+        val id: Int
+        val size: Int
+        if (activity == "Game") {
+            countryNum = random.nextInt(ActivityMode1.data!!.size)
+            id = ActivityMode1.data?.get(countryNum)!!.id
+            size = ActivityMode1.fullData!!.size
+        } else {
+            countryNum = random.nextInt(ActivityMode2.data!!.size)
+            id = ActivityMode2.data?.get(countryNum)!!.id
+            size = ActivityMode2.fullData!!.size
+        }
+        rightAnsPlace = random.nextInt(4)
+        wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)
+        wrongChoices[1] = getRandomChoice(wrongChoices[0], wrongChoices[2], size, id)
+        wrongChoices[2] = getRandomChoice(wrongChoices[0], wrongChoices[1], size, id)
+    }
 
     fun mode1() {
         choices[rightAnsPlace] = if (mode == "FtoCo") ActivityMode1.data?.get(countryNum)?.countryName else ActivityMode1.data?.get(countryNum)?.capitalName
@@ -44,25 +64,5 @@ class MakeQuestion(mode: String, Activity: String) {
             choice1 = random.nextInt(size)
         } while (choice1 == choice2 || choice1 == choice3 || choice1 == id)
         return choice1
-    }
-
-    init {
-        val random = Random()
-        this.mode = mode
-        val id: Int
-        val size: Int
-        if (Activity == "Game") {
-            countryNum = random.nextInt(ActivityMode1.data!!.size)
-            id = ActivityMode1.data?.get(countryNum)!!.id
-            size = ActivityMode1.fullData!!.size
-        } else {
-            countryNum = random.nextInt(ActivityMode2.data!!.size)
-            id = ActivityMode2.data?.get(countryNum)!!.id
-            size = ActivityMode2.fullData!!.size
-        }
-        rightAnsPlace = random.nextInt(4)
-        wrongChoices[0] = getRandomChoice(wrongChoices[1], wrongChoices[2], size, id)
-        wrongChoices[1] = getRandomChoice(wrongChoices[0], wrongChoices[2], size, id)
-        wrongChoices[2] = getRandomChoice(wrongChoices[0], wrongChoices[1], size, id)
     }
 }
