@@ -8,7 +8,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.teknos.flags"
+        applicationId "cat.teknos.flags"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -27,7 +27,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    namespace 'com.teknos.flags'
+    namespace 'cat.teknos.flags'
 }
 
 dependencies {

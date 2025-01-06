@@ -1,4 +1,4 @@
-package com.teknos.flags.view.activity
+package cat.teknos.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
@@ -7,14 +7,14 @@ import android.widget.TextView
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.teknos.flags.R
-import com.teknos.flags.database.DataRetriever
+import cat.teknos.flags.R
+import cat.teknos.flags.database.DataRetriever
 import java.util.ArrayList
-import com.teknos.flags.R.drawable
-import com.teknos.flags.model.Country
-import com.teknos.flags.view.logic.MakeQuestion
-import com.teknos.flags.view.logic.AnswerChecker
-import com.teknos.flags.view.logic.SetQuestion
+import cat.teknos.flags.R.drawable
+import cat.teknos.flags.model.Country
+import cat.teknos.flags.view.logic.MakeQuestion
+import cat.teknos.flags.view.logic.AnswerChecker
+import cat.teknos.flags.view.logic.SetQuestion
 import java.lang.Exception
 
 class ActivityMode1 : AppCompatActivity() {

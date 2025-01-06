@@ -1,7 +1,7 @@
-package com.teknos.flags.view.logic
+package cat.teknos.flags.view.logic
 
-import com.teknos.flags.view.activity.ActivityMode1
-import com.teknos.flags.view.activity.ActivityMode2
+import cat.teknos.flags.view.activity.ActivityMode1
+import cat.teknos.flags.view.activity.ActivityMode2
 import java.util.*
 
 class MakeQuestion(mode: String, activity: String) {

@@ -1,4 +1,4 @@
-package com.teknos.flags
+package cat.teknos.flags
 
 import org.junit.Test
 

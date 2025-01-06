@@ -1,4 +1,4 @@
-package com.teknos.flags.model
+package cat.teknos.flags.model
 
 class Country(
     var id: Int,
