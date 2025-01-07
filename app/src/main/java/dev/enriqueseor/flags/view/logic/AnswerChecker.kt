@@ -1,11 +1,11 @@
-package cat.teknos.flags.view.logic
+package dev.enriqueseor.flags.view.logic
 
 import android.content.Context
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
-import cat.teknos.flags.R
+import dev.enriqueseor.flags.R
 
 class AnswerChecker {
 

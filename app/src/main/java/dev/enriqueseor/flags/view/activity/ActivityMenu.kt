@@ -1,10 +1,10 @@
-package cat.teknos.flags.view.activity
+package dev.enriqueseor.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
-import cat.teknos.flags.R
+import dev.enriqueseor.flags.R
 
 class ActivityMenu : AppCompatActivity() {
 

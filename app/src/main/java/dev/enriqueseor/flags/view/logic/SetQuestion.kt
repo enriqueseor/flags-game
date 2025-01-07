@@ -1,4 +1,4 @@
-package cat.teknos.flags.view.logic
+package dev.enriqueseor.flags.view.logic
 
 import android.content.Context
 import android.widget.ImageView
@@ -6,9 +6,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.ImageButton
 import androidx.appcompat.content.res.AppCompatResources
-import cat.teknos.flags.view.activity.ActivityMode1
-import cat.teknos.flags.view.activity.ActivityMode2
-import cat.teknos.flags.R
+import dev.enriqueseor.flags.view.activity.ActivityMode1
+import dev.enriqueseor.flags.view.activity.ActivityMode2
+import dev.enriqueseor.flags.R
 
 class SetQuestion {
 

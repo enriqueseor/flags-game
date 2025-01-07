@@ -1,49 +1,50 @@
-package cat.teknos.flags.view.activity
+package dev.enriqueseor.flags.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
+import android.widget.Button
 import android.widget.TextView
-import android.widget.ImageButton
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import cat.teknos.flags.R
-import cat.teknos.flags.R.drawable
-import cat.teknos.flags.database.DataRetriever
-import java.util.ArrayList
-import cat.teknos.flags.model.Country
-import cat.teknos.flags.view.logic.MakeQuestion
-import cat.teknos.flags.view.logic.AnswerChecker
-import cat.teknos.flags.view.logic.SetQuestion
+import dev.enriqueseor.flags.R
+import dev.enriqueseor.flags.database.DataRetriever
+import dev.enriqueseor.flags.R.drawable
+import dev.enriqueseor.flags.model.Country
+import dev.enriqueseor.flags.view.logic.MakeQuestion
+import dev.enriqueseor.flags.view.logic.AnswerChecker
+import dev.enriqueseor.flags.view.logic.SetQuestion
 import java.lang.Exception
+import java.util.ArrayList
 
-class ActivityMode2 : AppCompatActivity() {
+class ActivityMode1 : AppCompatActivity() {
 
     private var mode: String? = null
     private var makeQuestion: MakeQuestion? = null
-    private var country: TextView? = null
-    private var choice1: ImageButton? = null
-    private var choice2: ImageButton? = null
-    private var choice3: ImageButton? = null
-    private var choice4: ImageButton? = null
+    private var flag: ImageView? = null
+    private var choice1: Button? = null
+    private var choice2: Button? = null
+    private var choice3: Button? = null
+    private var choice4: Button? = null
     private var right: TextView? = null
     private var wrong: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mode2)
+        setContentView(R.layout.activity_mode1)
         mode = intent.getStringExtra("MODE_TYPE")
         assignVars()
-        makeQuestion = MakeQuestion(mode!!, "Opposite")
-        SetQuestion(this, country!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
+        makeQuestion = MakeQuestion(mode!!, "Game")
+        SetQuestion(this, flag!!, choice1!!, choice2!!, choice3!!, choice4!!, makeQuestion!!)
         choice()
     }
 
     private fun next() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            makeQuestion = MakeQuestion(mode!!, "Opposite")
+        Handler(Looper.getMainLooper()).postDelayed(Runnable@{
+            makeQuestion = MakeQuestion(mode!!, "Game")
             SetQuestion(
-                this@ActivityMode2,
-                country!!,
+                this@ActivityMode1,
+                flag!!,
                 choice1!!,
                 choice2!!,
                 choice3!!,
@@ -58,7 +59,7 @@ class ActivityMode2 : AppCompatActivity() {
         data = dataRetriever.data
         fullData = ArrayList()
         (fullData as ArrayList<Country>).addAll(data!!)
-        country = findViewById(R.id.name)
+        flag = findViewById(R.id.FlagImage)
         choice1 = findViewById(R.id.c1)
         choice2 = findViewById(R.id.c2)
         choice3 = findViewById(R.id.c3)
@@ -72,17 +73,14 @@ class ActivityMode2 : AppCompatActivity() {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 0, right!!, wrong!!)
             next()
         }
-
         choice2?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 1, right!!, wrong!!)
             next()
         }
-
         choice3?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 2, right!!, wrong!!)
             next()
         }
-
         choice4?.setOnClickListener {
             AnswerChecker(this, choice1, choice2, choice3, choice4, makeQuestion!!, 3, right!!, wrong!!)
             next()
