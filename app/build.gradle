@@ -8,7 +8,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "cat.teknos.flags"
+        applicationId "dev.enriqueseor.flags"
         minSdk 28
         targetSdk 35
         versionCode 1
